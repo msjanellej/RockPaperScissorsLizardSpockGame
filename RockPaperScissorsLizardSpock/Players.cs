@@ -24,13 +24,12 @@ namespace RockPaperScissorsLizardSpock
             
 
         }
+
+        //member methods
         public abstract void ChooseGesture();
 
-        // member methods
-        // 
-         
-        // Choose Gesture Option here. Can override in the computer child class
-        // perhaps choose gesture is abstract method. public abstract void ChooseGesture();
+        
+        
        
     }
 }

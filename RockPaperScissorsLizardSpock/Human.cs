@@ -23,8 +23,9 @@ namespace RockPaperScissorsLizardSpock
         public override void ChooseGesture()
         {
             Console.WriteLine("Please choose from the list below:");
-            Console.WriteLine("Choose '1' for rock, '2' for paper, '3' for scissors");
-            Console.WriteLine("'4' for lizard, or '5' for Spock");
+            Console.WriteLine("Choose '0' for rock, '1' for paper, '2' for scissors");
+            Console.WriteLine("'3' for lizard, or '4' for Spock");
+            Console.WriteLine();
             response = int.Parse(Console.ReadLine());
             switch (response)
             {//update numbers in cw above move to computer class chosengesture instead of response

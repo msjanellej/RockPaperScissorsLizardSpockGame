@@ -60,15 +60,21 @@ namespace RockPaperScissorsLizardSpock
             switch (numberOfPlayers)
             {
                 case "1":
+                    Console.WriteLine();
                     Console.WriteLine("You have chosen one player. You will play against the computer.");
+                    Console.WriteLine();
                     playerTwo = new Computer();
                     break;
                 case "2":
+                    Console.WriteLine();
                     Console.WriteLine("You have chosen two players. You will battle each other. ");
+                    Console.WriteLine();
                     playerTwo = new Human();
                     break;
                 default:
+                    Console.WriteLine();
                     Console.WriteLine("You did not make a valid choice.");
+                    Console.WriteLine();
                     break;
 
             }
@@ -89,24 +95,41 @@ namespace RockPaperScissorsLizardSpock
             //players tie 
             if (playerOne.ChosenGesture == playerTwo.ChosenGesture)
             {
+                Console.WriteLine();
                 Console.WriteLine("This Round Was a tie");
+                Console.WriteLine();
             }
             if (playerOne.ChosenGesture > playerTwo.ChosenGesture)
             {
                 playerOneScore += 10;
+                Console.WriteLine();
                 Console.WriteLine("Player one wins this round!");
+                Console.WriteLine();
             }
             else
             {
                 playerTwoScore += 10;
+                Console.WriteLine();
                 Console.WriteLine("Player two wins this round");
+                Console.WriteLine();
             }
-            // player one wins
-            //player two wins
-            //assign point to whomever wins round. 
+             
             
         }
-        
+        public void DisplayWinner()
+        {
+            if (playerOneScore == 20)
+            {
+                Console.WriteLine();
+                Console.WriteLine("Player One is victorious!!!");
+            }
+            if (playerTwoScore == 20)
+            {
+                Console.WriteLine();
+                Console.WriteLine("Player Two is victorious!!!");
+            }
+        }
+
         
         public void RunGame()
         {
@@ -119,6 +142,7 @@ namespace RockPaperScissorsLizardSpock
                 CompareChoices();
 
             }
+            DisplayWinner();
             
         }
     }

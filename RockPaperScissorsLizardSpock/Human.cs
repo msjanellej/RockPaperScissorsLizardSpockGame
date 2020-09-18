@@ -6,14 +6,17 @@ using System.Threading.Tasks;
 
 namespace RockPaperScissorsLizardSpock
 {
-    class Program
+    class Human : Players
     {
-        static void Main(string[] args)
+        //member variables
+
+        // constructor
+        public Human()
         {
-            // instantiate game here.
-            Game game = new Game();
-            game.RunGame();
-            Console.ReadLine();
+
         }
+
+        // member methods
+        // Create Choose Gesture Method
     }
 }

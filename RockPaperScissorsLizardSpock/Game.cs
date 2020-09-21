@@ -315,9 +315,9 @@ namespace RockPaperScissorsLizardSpock
             {
                 
                 playerOne.ChooseGesture();
-               
                 Console.WriteLine();
-                playerTwo.ChooseGesture();
+                Console.WriteLine();
+                playerTwo.ChooseGesture();           
                 Console.WriteLine();
                 CompareChoices();
 

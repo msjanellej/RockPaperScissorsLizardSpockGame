@@ -18,7 +18,7 @@ namespace RockPaperScissorsLizardSpock
         public Players()
         {
             score = 0;
-            gestures = new List<string>() { "rock", "paper", "scissors", "lizard", "Spock" };
+            gestures = new List<string>() {"rock", "paper", "scissors", "lizard", "Spock" };
 
           
             

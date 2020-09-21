@@ -36,6 +36,7 @@ namespace RockPaperScissorsLizardSpock
                 {
                     case "rock":
                         Console.WriteLine("You chose rock");
+
                         condition = false;
                         break;
                     case "paper":

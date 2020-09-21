@@ -106,7 +106,7 @@ namespace RockPaperScissorsLizardSpock
                 Console.WriteLine("Player one wins this round!");
                 Console.WriteLine();
             }
-            else
+            if (playerOneScore < playerTwoScore)
             {
                 playerTwoScore += 10;
                 Console.WriteLine();

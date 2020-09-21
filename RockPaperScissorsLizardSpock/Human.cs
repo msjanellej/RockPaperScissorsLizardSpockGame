@@ -28,7 +28,7 @@ namespace RockPaperScissorsLizardSpock
             Console.WriteLine();
             response = int.Parse(Console.ReadLine());
             switch (response)
-            {//update numbers in cw above move to computer class chosengesture instead of response
+            {
                 case 0:
                     Console.WriteLine("You chose rock");
                     break;
@@ -42,10 +42,13 @@ namespace RockPaperScissorsLizardSpock
                     Console.WriteLine("You chose lizard");
                     break;
                 case 4:
-                    Console.WriteLine("You chose spock");
+                    Console.WriteLine("You chose Spock");
+                    break;
+                default:
+                    Console.WriteLine("The choice you made was not valid.");
                     break;
             }
-            ChosenGesture = response;
+            ChosenGesture = gestures[response].ToString();
 
             
         }

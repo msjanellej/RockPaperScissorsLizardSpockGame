@@ -27,8 +27,8 @@ namespace RockPaperScissorsLizardSpock
         // create override ChoosGesture method
         public override void ChooseGesture()
         {
-            ChosenGesture =  rand.Next(gestures.Count);
-            switch (ChosenGesture)
+            int result =  rand.Next(gestures.Count);
+            switch (result)
             {
                 case 0:
                     Console.WriteLine("Computer chose rock");
@@ -46,6 +46,7 @@ namespace RockPaperScissorsLizardSpock
                     Console.WriteLine("Computer chose spock");
                     break;
             }
+            ChosenGesture = result.ToString();
 
         }
 

@@ -24,7 +24,7 @@ namespace RockPaperScissorsLizardSpock
         }
 
         // member methods
-        // create override ChoosGesture method
+        
         public override void ChooseGesture()
         {
             int result =  rand.Next(gestures.Count);

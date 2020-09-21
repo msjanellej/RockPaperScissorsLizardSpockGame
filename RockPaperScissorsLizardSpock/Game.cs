@@ -50,13 +50,13 @@ namespace RockPaperScissorsLizardSpock
             Console.WriteLine();
         }
         public void ChooseGameType() //This needs validation
-        {
-            Console.WriteLine("Please Choose The Number of Players");
-            Console.WriteLine("Type '1' for One Player. Type '2' for Two Players");
-            string numberOfPlayers = Console.ReadLine();
+        {   
             condition = true;
             while (condition)
             {
+                Console.WriteLine("Please Choose The Number of Players");
+                Console.WriteLine("Type '1' for One Player. Type '2' for Two Players");
+                string numberOfPlayers = Console.ReadLine();
                 switch (numberOfPlayers)
                 {
                     case "1":

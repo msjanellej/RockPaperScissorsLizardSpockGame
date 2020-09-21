@@ -23,13 +23,15 @@ namespace RockPaperScissorsLizardSpock
         
         public override void ChooseGesture()
         {
-            Console.WriteLine("Please choose from the list below:");
-            Console.WriteLine("'rock', 'paper', 'scissors', 'lizard', or 'Spock'");          
-            Console.WriteLine();
             condition = true;
-            response = Console.ReadLine();
-            while (!condition)
+            
+            while (condition)
             {
+                Console.WriteLine("Please choose from the list below:");
+                Console.WriteLine("'rock', 'paper', 'scissors', 'lizard', or 'Spock'");
+                Console.WriteLine();
+                response = Console.ReadLine();
+                Console.WriteLine();
                 switch (response)
                 {
                     case "rock":

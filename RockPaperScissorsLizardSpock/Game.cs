@@ -23,14 +23,10 @@ namespace RockPaperScissorsLizardSpock
         }
 
         // member methods
-        public void Welcome()
+        public void DisplayRules()
         {
             Console.WriteLine("Welcome to Rock, Paper, Scissors, Lizard, Spock");
             Console.WriteLine();
-        }
-        public void DisplayRules()
-        {
-
             Console.WriteLine("The Rules Are Simple:");
             Console.WriteLine("First Choose Your Number of Players");
             Console.WriteLine("Each Round Players Will Choose A Gesture.");
@@ -101,7 +97,6 @@ namespace RockPaperScissorsLizardSpock
         }
         public void RunGame()
         {
-            Welcome();
             DisplayRules();
             ChooseGameType();
             while (DoesGameContinue())

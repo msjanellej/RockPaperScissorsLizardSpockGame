@@ -9,13 +9,16 @@ namespace RockPaperScissorsLizardSpock
     class Comparative
     {
         //member variables
+        public int playerOneScore;
+        public int playerTwoScore;
 
 
 
         //constructor
         public Comparative()
         {
-
+            playerOneScore = 0;
+            playerTwoScore = 0;
 
 
         }
@@ -26,7 +29,13 @@ namespace RockPaperScissorsLizardSpock
 
         public void CompareChoices(Players playerOne, Players playerTwo, int playerOneScore, int playerTwoScore)
         {
-            if (playerOne.chosenGesture == "rock" && playerTwo.chosenGesture == "paper")
+            if (playerOne.chosenGesture == playerTwo.chosenGesture)
+            {
+                Console.WriteLine();
+                Console.WriteLine("This Round Was a tie");
+                Console.WriteLine();
+            }
+            else if (playerOne.chosenGesture == "rock" && playerTwo.chosenGesture == "paper")
             {
                 playerTwoScore += 10;
                 Console.WriteLine();
@@ -208,12 +217,7 @@ namespace RockPaperScissorsLizardSpock
                 Console.WriteLine("Player One Wins This Round");
                 Console.WriteLine();
             }
-            else
-            {
-                Console.WriteLine();
-                Console.WriteLine("This Round Was a tie");
-                Console.WriteLine();
-            }
+            
 
 
         }

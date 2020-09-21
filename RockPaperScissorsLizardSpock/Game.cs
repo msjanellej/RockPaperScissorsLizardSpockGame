@@ -12,8 +12,7 @@ namespace RockPaperScissorsLizardSpock
         //member variables
         public Players playerOne;
         public Players playerTwo;
-        public int playerOneScore;
-        public int playerTwoScore;
+        
         bool condition;
         public Comparative comparative;
         
@@ -23,6 +22,7 @@ namespace RockPaperScissorsLizardSpock
         {
             playerOne = new Human();
             comparative = new Comparative();
+            
             
         }
 
@@ -84,12 +84,12 @@ namespace RockPaperScissorsLizardSpock
         }       
         public void DisplayWinner()
         {
-            if (playerOneScore == 20)
+            if (comparative.playerOneScore == 20)
             {
                 Console.WriteLine();
                 Console.WriteLine("Player One is victorious!!!");
             }
-            if (playerTwoScore == 20)
+            if (comparative.playerTwoScore == 20)
             {
                 Console.WriteLine();
                 Console.WriteLine("Player Two is victorious!!!");
@@ -97,7 +97,7 @@ namespace RockPaperScissorsLizardSpock
         }
         public bool DoesGameContinue()
         {
-            if (playerOneScore >= 20 || playerTwoScore >= 20)
+            if (comparative.playerOneScore >= 20 || comparative.playerTwoScore >= 20)
             {
                 return false;
             }
@@ -121,7 +121,7 @@ namespace RockPaperScissorsLizardSpock
                 Console.WriteLine();
                 playerTwo.ChooseGesture();           
                 Console.WriteLine();
-                comparative.CompareChoices(playerOne,playerTwo,playerOneScore, playerTwoScore);
+                comparative.CompareChoices(playerOne,playerTwo,comparative.playerOneScore, comparative.playerTwoScore);
 
             }
             DisplayWinner();

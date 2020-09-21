@@ -11,7 +11,7 @@ namespace RockPaperScissorsLizardSpock
     {
         //member variables
         public int score;
-        public string ChosenGesture;
+        public string chosenGesture;
         public List<string> gestures; 
 
         //constructor

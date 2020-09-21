@@ -43,10 +43,10 @@ namespace RockPaperScissorsLizardSpock
                     Console.WriteLine("Computer chose lizard");
                     break;
                 case 4:
-                    Console.WriteLine("Computer chose spock");
+                    Console.WriteLine("Computer chose Spock");
                     break;
             }
-            ChosenGesture = result.ToString();
+            chosenGesture = gestures[result];
 
         }
 

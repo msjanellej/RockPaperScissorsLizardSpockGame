@@ -10,7 +10,8 @@ namespace RockPaperScissorsLizardSpock
     class Human : Players
     {
         //member variables
-        int response;
+        string response;
+        bool condition;
 
         // constructor
         public Human()
@@ -19,36 +20,44 @@ namespace RockPaperScissorsLizardSpock
         }
 
         // member methods
-        // Create override Choose Gesture Method for human
+        
         public override void ChooseGesture()
         {
             Console.WriteLine("Please choose from the list below:");
-            Console.WriteLine("Choose '0' for rock, '1' for paper, '2' for scissors");
-            Console.WriteLine("'3' for lizard, or '4' for Spock");
+            Console.WriteLine("'rock', 'paper', 'scissors', 'lizard', or 'Spock'");          
             Console.WriteLine();
-            response = int.Parse(Console.ReadLine());
-            switch (response)
+            condition = true;
+            response = Console.ReadLine();
+            while (!condition)
             {
-                case 0:
-                    Console.WriteLine("You chose rock");
-                    break;
-                case 1:
-                    Console.WriteLine("You chose paper");
-                    break;
-                case 2:
-                    Console.WriteLine("You chose scissors");
-                    break;
-                case 3:
-                    Console.WriteLine("You chose lizard");
-                    break;
-                case 4:
-                    Console.WriteLine("You chose Spock");
-                    break;
-                default:
-                    Console.WriteLine("The choice you made was not valid.");
-                    break;
+                switch (response)
+                {
+                    case "rock":
+                        Console.WriteLine("You chose rock");
+                        condition = false;
+                        break;
+                    case "paper":
+                        Console.WriteLine("You chose paper");
+                        condition = false;
+                        break;
+                    case "scissors":
+                        Console.WriteLine("You chose scissors");
+                        condition = false;
+                        break;
+                    case "lizard":
+                        Console.WriteLine("You chose lizard");
+                        condition = false;
+                        break;
+                    case "Spock":
+                        Console.WriteLine("You chose Spock");
+                        condition = false;
+                        break;
+                    default:
+                        Console.WriteLine("The choice you made was not valid.");
+                        break;
+                }
             }
-            ChosenGesture = gestures[response].ToString();
+            chosenGesture = response;
 
             
         }

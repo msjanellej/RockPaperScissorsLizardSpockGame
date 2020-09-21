@@ -14,13 +14,14 @@ namespace RockPaperScissorsLizardSpock
         public Players playerTwo;
         public int playerOneScore;
         public int playerTwoScore;
-        // declare round object
+        bool condition;
+        
 
         //constructor
         public Game()
         {
             playerOne = new Human();
-            // instantiate round object here.
+            
         }
 
         // member methods
@@ -51,29 +52,38 @@ namespace RockPaperScissorsLizardSpock
         public void ChooseGameType() //This needs validation
         {
             Console.WriteLine("Please Choose The Number of Players");
-            Console.WriteLine("Type '1' for One Player. Choose '2' for Two Players");
+            Console.WriteLine("Type '1' for One Player. Type '2' for Two Players");
             string numberOfPlayers = Console.ReadLine();
-            switch (numberOfPlayers)
+            condition = true;
+            while (condition)
             {
-                case "1":
-                    Console.WriteLine();
-                    Console.WriteLine("You have chosen one player. You will play against the computer.");
-                    Console.WriteLine();
-                    playerTwo = new Computer();
-                    break;
-                case "2":
-                    Console.WriteLine();
-                    Console.WriteLine("You have chosen two players. You will battle each other. ");
-                    Console.WriteLine();
-                    playerTwo = new Human();
-                    break;
-                default:
-                    Console.WriteLine();
-                    Console.WriteLine("You did not make a valid choice.");
-                    Console.WriteLine();
-                    break;
+                switch (numberOfPlayers)
+                {
+                    case "1":
+                        Console.WriteLine();
+                        Console.WriteLine("You have chosen one player. You will play against the computer.");
+                        Console.WriteLine();
+                        playerTwo = new Computer();
+                        condition = false;
+                        break;
+                    case "2":
+                        Console.WriteLine();
+                        Console.WriteLine("You have chosen two players. You will battle each other. ");
+                        Console.WriteLine();
+                        playerTwo = new Human();
+                        condition = false;
+                        break;
+                    default:
+                        Console.WriteLine();
+                        Console.WriteLine("You did not make a valid choice.");
+                        Console.WriteLine();
+                        condition = true;
+                        break;
+
+                }
 
             }
+            
         }
         public bool DoesGameContinue()
         {
@@ -88,7 +98,7 @@ namespace RockPaperScissorsLizardSpock
         }
         public void CompareChoices()
         {
-            if(playerOne.ChosenGesture == "rock" && playerTwo.ChosenGesture == "paper")
+            if(playerOne.chosenGesture == "rock" && playerTwo.chosenGesture == "paper")
             {
                 playerTwoScore += 10;
                 Console.WriteLine();
@@ -97,7 +107,7 @@ namespace RockPaperScissorsLizardSpock
                 Console.WriteLine();
 
             }
-            else if (playerOne.ChosenGesture == "rock" && playerTwo.ChosenGesture == "Spock")
+            else if (playerOne.chosenGesture == "rock" && playerTwo.chosenGesture == "Spock")
             {
                 playerTwoScore += 10;
                 Console.WriteLine();
@@ -105,7 +115,7 @@ namespace RockPaperScissorsLizardSpock
                 Console.WriteLine("Player Two Wins This Round");
                 Console.WriteLine();
             }
-            else if (playerOne.ChosenGesture == "rock" && playerTwo.ChosenGesture == "scissors")
+            else if (playerOne.chosenGesture == "rock" && playerTwo.chosenGesture == "scissors")
             {
                 playerOneScore += 10;
                 Console.WriteLine();
@@ -114,7 +124,7 @@ namespace RockPaperScissorsLizardSpock
                 Console.WriteLine();
 
             }
-            else if (playerOne.ChosenGesture == "rock"&& playerTwo.ChosenGesture == "lizard")
+            else if (playerOne.chosenGesture == "rock"&& playerTwo.chosenGesture == "lizard")
             {
                 playerOneScore += 10;
                 Console.WriteLine();
@@ -122,7 +132,7 @@ namespace RockPaperScissorsLizardSpock
                 Console.WriteLine("player One Wins This Round");
                 Console.WriteLine();
             }
-            else if (playerOne.ChosenGesture == "paper" && playerTwo.ChosenGesture == "rock")
+            else if (playerOne.chosenGesture == "paper" && playerTwo.chosenGesture == "rock")
             {
                 playerOneScore += 10;
                 Console.WriteLine();
@@ -130,7 +140,7 @@ namespace RockPaperScissorsLizardSpock
                 Console.WriteLine("Player One Wins This Round");
                 Console.WriteLine();
             }
-            else if (playerOne.ChosenGesture == "paper"&& playerTwo.ChosenGesture == "Spock")
+            else if (playerOne.chosenGesture == "paper"&& playerTwo.chosenGesture == "Spock")
             {
                 playerOneScore += 10;
                 Console.WriteLine();
@@ -138,7 +148,7 @@ namespace RockPaperScissorsLizardSpock
                 Console.WriteLine("Player One Wins This Round");
                 Console.WriteLine();
             }
-            else if (playerOne.ChosenGesture == "paper" && playerTwo.ChosenGesture == "lizard")
+            else if (playerOne.chosenGesture == "paper" && playerTwo.chosenGesture == "lizard")
             {
                 playerTwoScore += 10;
                 Console.WriteLine();
@@ -146,7 +156,7 @@ namespace RockPaperScissorsLizardSpock
                 Console.WriteLine("Player Two Wins This Round");
                 Console.WriteLine();
             }
-            else if (playerOne.ChosenGesture == "paper" && playerTwo.ChosenGesture == "scissors")
+            else if (playerOne.chosenGesture == "paper" && playerTwo.chosenGesture == "scissors")
             {
                 playerTwoScore += 10;
                 Console.WriteLine();
@@ -154,7 +164,7 @@ namespace RockPaperScissorsLizardSpock
                 Console.WriteLine("Player Two Wins This Round");
                 Console.WriteLine();
             }
-            else if (playerOne.ChosenGesture == "scissors" && playerTwo.ChosenGesture == "rock")
+            else if (playerOne.chosenGesture == "scissors" && playerTwo.chosenGesture == "rock")
             {
                 playerTwoScore += 10;
                 Console.WriteLine();
@@ -162,7 +172,7 @@ namespace RockPaperScissorsLizardSpock
                 Console.WriteLine("Player Two Wins This Round");
                 Console.WriteLine();
             }
-            else if (playerOne.ChosenGesture == "scissors" && playerTwo.ChosenGesture == "paper")
+            else if (playerOne.chosenGesture == "scissors" && playerTwo.chosenGesture == "paper")
             {
                 playerOneScore += 10;
                 Console.WriteLine();
@@ -170,7 +180,7 @@ namespace RockPaperScissorsLizardSpock
                 Console.WriteLine("Player One Wins This Round");
                 Console.WriteLine();
             }
-            else if (playerOne.ChosenGesture == "scissors" && playerTwo.ChosenGesture == "Spock")
+            else if (playerOne.chosenGesture == "scissors" && playerTwo.chosenGesture == "Spock")
             {
                 playerTwoScore += 10;
                 Console.WriteLine();
@@ -178,7 +188,7 @@ namespace RockPaperScissorsLizardSpock
                 Console.WriteLine("Player Two Wins This Round");
                 Console.WriteLine();
             }
-            else if (playerOne.ChosenGesture == "scissors" && playerTwo.ChosenGesture == "lizard")
+            else if (playerOne.chosenGesture == "scissors" && playerTwo.chosenGesture == "lizard")
             {
                 playerOneScore += 10;
                 Console.WriteLine();
@@ -186,7 +196,7 @@ namespace RockPaperScissorsLizardSpock
                 Console.WriteLine("Player One Wins This Round");
                 Console.WriteLine();
             }
-            else if (playerOne.ChosenGesture == "lizard" && playerTwo.ChosenGesture == "Spock")
+            else if (playerOne.chosenGesture == "lizard" && playerTwo.chosenGesture == "Spock")
             {
                 playerOneScore += 10;
                 Console.WriteLine();
@@ -194,7 +204,7 @@ namespace RockPaperScissorsLizardSpock
                 Console.WriteLine("Player One Wins This Round");
                 Console.WriteLine();
             }
-            else if (playerOne.ChosenGesture == "lizard" && playerTwo.ChosenGesture == "paper")
+            else if (playerOne.chosenGesture == "lizard" && playerTwo.chosenGesture == "paper")
             {
                 playerOneScore += 10;
                 Console.WriteLine();
@@ -202,7 +212,7 @@ namespace RockPaperScissorsLizardSpock
                 Console.WriteLine("Player One Wins This Round");
                 Console.WriteLine();
             }
-            else if (playerOne.ChosenGesture == "lizard" && playerTwo.ChosenGesture == "rock")
+            else if (playerOne.chosenGesture == "lizard" && playerTwo.chosenGesture == "rock")
             {
                 playerTwoScore += 10;
                 Console.WriteLine();
@@ -210,7 +220,7 @@ namespace RockPaperScissorsLizardSpock
                 Console.WriteLine("Player Two Wins This Round");
                 Console.WriteLine();
             }
-            else if (playerOne.ChosenGesture == "lizard" && playerTwo.ChosenGesture == "scissors")
+            else if (playerOne.chosenGesture == "lizard" && playerTwo.chosenGesture == "scissors")
             {
                 playerTwoScore += 10;
                 Console.WriteLine();
@@ -218,7 +228,7 @@ namespace RockPaperScissorsLizardSpock
                 Console.WriteLine("Player Two Wins This Round");
                 Console.WriteLine();
             }
-            else if (playerOne.ChosenGesture == "Spock" && playerTwo.ChosenGesture == "paper")
+            else if (playerOne.chosenGesture == "Spock" && playerTwo.chosenGesture == "paper")
             {
                 playerTwoScore += 10;
                 Console.WriteLine();
@@ -226,7 +236,7 @@ namespace RockPaperScissorsLizardSpock
                 Console.WriteLine("Player Two Wins This Round");
                 Console.WriteLine();
             }
-            else if (playerOne.ChosenGesture == "Spock" && playerTwo.ChosenGesture == "lizard")
+            else if (playerOne.chosenGesture == "Spock" && playerTwo.chosenGesture == "lizard")
             {
                 playerTwoScore += 10;
                 Console.WriteLine();
@@ -234,7 +244,7 @@ namespace RockPaperScissorsLizardSpock
                 Console.WriteLine("Player Two Wins This Round");
                 Console.WriteLine();
             }
-            else if (playerOne.ChosenGesture == "Spock" && playerTwo.ChosenGesture == "rock")
+            else if (playerOne.chosenGesture == "Spock" && playerTwo.chosenGesture == "rock")
             {
                 playerOneScore += 10;
                 Console.WriteLine();
@@ -242,7 +252,7 @@ namespace RockPaperScissorsLizardSpock
                 Console.WriteLine("Player One Wins This Round");
                 Console.WriteLine();
             }
-            else if (playerOne.ChosenGesture == "Spock" && playerTwo.ChosenGesture == "scissors")
+            else if (playerOne.chosenGesture == "Spock" && playerTwo.chosenGesture == "scissors")
             {
                 playerOneScore += 10;
                 Console.WriteLine();
@@ -283,8 +293,7 @@ namespace RockPaperScissorsLizardSpock
             ChooseGameType();
             while (DoesGameContinue())
             {
-                Console.Clear();
-                DisplayRules();
+                
                 playerOne.ChooseGesture();
                
                 Console.WriteLine();

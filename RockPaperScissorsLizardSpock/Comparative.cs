@@ -11,23 +11,15 @@ namespace RockPaperScissorsLizardSpock
         //member variables
         public int playerOneScore;
         public int playerTwoScore;
-
-
-
         //constructor
         public Comparative()
         {
             playerOneScore = 0;
             playerTwoScore = 0;
-
-
         }
 
         // membermethods
-
-
-
-        public void CompareChoices(Players playerOne, Players playerTwo, int playerOneScore, int playerTwoScore)
+        public void CompareChoices(Players playerOne, Players playerTwo)
         {
             if (playerOne.chosenGesture == playerTwo.chosenGesture)
             {
@@ -37,7 +29,7 @@ namespace RockPaperScissorsLizardSpock
             }
             else if (playerOne.chosenGesture == "rock" && playerTwo.chosenGesture == "paper")
             {
-                playerTwoScore += 10;
+                playerTwo.score += 10;
                 Console.WriteLine();
                 Console.WriteLine("Paper covers rock");
                 Console.WriteLine();
@@ -47,7 +39,7 @@ namespace RockPaperScissorsLizardSpock
             }
             else if (playerOne.chosenGesture == "rock" && playerTwo.chosenGesture == "Spock")
             {
-                playerTwoScore += 10;
+                playerTwo.score += 10;
                 Console.WriteLine();
                 Console.WriteLine("Spock vaporizes rock");
                 Console.WriteLine();
@@ -56,7 +48,7 @@ namespace RockPaperScissorsLizardSpock
             }
             else if (playerOne.chosenGesture == "rock" && playerTwo.chosenGesture == "scissors")
             {
-                playerOneScore += 10;
+                playerOne.score += 10;
                 Console.WriteLine();
                 Console.WriteLine("Rock smashes scissors");
                 Console.WriteLine();
@@ -66,7 +58,7 @@ namespace RockPaperScissorsLizardSpock
             }
             else if (playerOne.chosenGesture == "rock" && playerTwo.chosenGesture == "lizard")
             {
-                playerOneScore += 10;
+                playerOne.score += 10;
                 Console.WriteLine();
                 Console.WriteLine("Rock smashes lizard");
                 Console.WriteLine();
@@ -75,7 +67,7 @@ namespace RockPaperScissorsLizardSpock
             }
             else if (playerOne.chosenGesture == "paper" && playerTwo.chosenGesture == "rock")
             {
-                playerOneScore += 10;
+                playerOne.score += 10;
                 Console.WriteLine();
                 Console.WriteLine("Paper covers rock");
                 Console.WriteLine();
@@ -84,7 +76,7 @@ namespace RockPaperScissorsLizardSpock
             }
             else if (playerOne.chosenGesture == "paper" && playerTwo.chosenGesture == "Spock")
             {
-                playerOneScore += 10;
+                playerOne.score += 10;
                 Console.WriteLine();
                 Console.WriteLine("Paper disproves Spock");
                 Console.WriteLine();
@@ -93,7 +85,7 @@ namespace RockPaperScissorsLizardSpock
             }
             else if (playerOne.chosenGesture == "paper" && playerTwo.chosenGesture == "lizard")
             {
-                playerTwoScore += 10;
+                playerTwo.score += 10;
                 Console.WriteLine();
                 Console.WriteLine("Lizard eats paper");
                 Console.WriteLine();
@@ -102,7 +94,7 @@ namespace RockPaperScissorsLizardSpock
             }
             else if (playerOne.chosenGesture == "paper" && playerTwo.chosenGesture == "scissors")
             {
-                playerTwoScore += 10;
+                playerTwo.score += 10;
                 Console.WriteLine();
                 Console.WriteLine("Scissors cut paper");
                 Console.WriteLine();
@@ -111,7 +103,7 @@ namespace RockPaperScissorsLizardSpock
             }
             else if (playerOne.chosenGesture == "scissors" && playerTwo.chosenGesture == "rock")
             {
-                playerTwoScore += 10;
+                playerTwo.score += 10;
                 Console.WriteLine();
                 Console.WriteLine("Rock crushes scissors");
                 Console.WriteLine();
@@ -120,7 +112,7 @@ namespace RockPaperScissorsLizardSpock
             }
             else if (playerOne.chosenGesture == "scissors" && playerTwo.chosenGesture == "paper")
             {
-                playerOneScore += 10;
+                playerOne.score += 10;
                 Console.WriteLine();
                 Console.WriteLine("Scissors cut paper");
                 Console.WriteLine();
@@ -129,7 +121,7 @@ namespace RockPaperScissorsLizardSpock
             }
             else if (playerOne.chosenGesture == "scissors" && playerTwo.chosenGesture == "Spock")
             {
-                playerTwoScore += 10;
+                playerTwo.score += 10;
                 Console.WriteLine();
                 Console.WriteLine("Spock smashes Scissors");
                 Console.WriteLine();
@@ -138,7 +130,7 @@ namespace RockPaperScissorsLizardSpock
             }
             else if (playerOne.chosenGesture == "scissors" && playerTwo.chosenGesture == "lizard")
             {
-                playerOneScore += 10;
+                playerOne.score += 10;
                 Console.WriteLine();
                 Console.WriteLine("Scissors decapitate lizard");
                 Console.WriteLine();
@@ -147,7 +139,7 @@ namespace RockPaperScissorsLizardSpock
             }
             else if (playerOne.chosenGesture == "lizard" && playerTwo.chosenGesture == "Spock")
             {
-                playerOneScore += 10;
+                playerOne.score += 10;
                 Console.WriteLine();
                 Console.WriteLine("Lizard poisons Spock");
                 Console.WriteLine();
@@ -156,7 +148,7 @@ namespace RockPaperScissorsLizardSpock
             }
             else if (playerOne.chosenGesture == "lizard" && playerTwo.chosenGesture == "paper")
             {
-                playerOneScore += 10;
+                playerOne.score += 10;
                 Console.WriteLine();
                 Console.WriteLine("Lizard eats paper");
                 Console.WriteLine();
@@ -165,7 +157,7 @@ namespace RockPaperScissorsLizardSpock
             }
             else if (playerOne.chosenGesture == "lizard" && playerTwo.chosenGesture == "rock")
             {
-                playerTwoScore += 10;
+                playerTwo.score += 10;
                 Console.WriteLine();
                 Console.WriteLine("Rock crushes lizard");
                 Console.WriteLine();
@@ -174,7 +166,7 @@ namespace RockPaperScissorsLizardSpock
             }
             else if (playerOne.chosenGesture == "lizard" && playerTwo.chosenGesture == "scissors")
             {
-                playerTwoScore += 10;
+                playerTwo.score += 10;
                 Console.WriteLine();
                 Console.WriteLine("Scissors decapitate lizard");
                 Console.WriteLine();
@@ -183,7 +175,7 @@ namespace RockPaperScissorsLizardSpock
             }
             else if (playerOne.chosenGesture == "Spock" && playerTwo.chosenGesture == "paper")
             {
-                playerTwoScore += 10;
+                playerTwo.score += 10;
                 Console.WriteLine();
                 Console.WriteLine("Paper disproves Spock");
                 Console.WriteLine();
@@ -192,7 +184,7 @@ namespace RockPaperScissorsLizardSpock
             }
             else if (playerOne.chosenGesture == "Spock" && playerTwo.chosenGesture == "lizard")
             {
-                playerTwoScore += 10;
+                playerTwo.score += 10;
                 Console.WriteLine();
                 Console.WriteLine("Lizard poisons Spock");
                 Console.WriteLine();
@@ -201,7 +193,7 @@ namespace RockPaperScissorsLizardSpock
             }
             else if (playerOne.chosenGesture == "Spock" && playerTwo.chosenGesture == "rock")
             {
-                playerOneScore += 10;
+                playerOne.score += 10;
                 Console.WriteLine();
                 Console.WriteLine("Spock vaporizes rock");
                 Console.WriteLine();
@@ -210,16 +202,13 @@ namespace RockPaperScissorsLizardSpock
             }
             else if (playerOne.chosenGesture == "Spock" && playerTwo.chosenGesture == "scissors")
             {
-                playerOneScore += 10;
+                playerOne.score += 10;
                 Console.WriteLine();
                 Console.WriteLine("Spock crushes scissors");
                 Console.WriteLine();
                 Console.WriteLine("Player One Wins This Round");
                 Console.WriteLine();
             }
-            
-
-
         }
     }
 }

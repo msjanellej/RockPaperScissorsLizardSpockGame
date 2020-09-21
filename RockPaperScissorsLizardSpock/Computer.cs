@@ -11,20 +11,13 @@ namespace RockPaperScissorsLizardSpock
         //member variables
         public Random rand;
 
-        
-        
-
-
         // Constructor
         public Computer()
         {
-            rand = new Random();
-            
-            
+            rand = new Random();   
         }
 
         // member methods
-        
         public override void ChooseGesture()
         {
             int result =  rand.Next(gestures.Count);
@@ -47,10 +40,6 @@ namespace RockPaperScissorsLizardSpock
                     break;
             }
             chosenGesture = gestures[result];
-
         }
-
-
-
     }
 }

@@ -19,10 +19,6 @@ namespace RockPaperScissorsLizardSpock
         {
             score = 0;
             gestures = new List<string>() {"rock", "paper", "scissors", "lizard", "Spock" };
-
-          
-            
-
         }
 
         //member methods

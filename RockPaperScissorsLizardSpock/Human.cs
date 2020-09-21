@@ -23,8 +23,7 @@ namespace RockPaperScissorsLizardSpock
         
         public override void ChooseGesture()
         {
-            condition = true;
-            
+            condition = true;      
             while (condition)
             {
                 Console.WriteLine("Please choose from the list below:");
@@ -61,9 +60,7 @@ namespace RockPaperScissorsLizardSpock
                         break;
                 }
             }
-            chosenGesture = response;
-
-            
+            chosenGesture = response; 
         }
     }
 }

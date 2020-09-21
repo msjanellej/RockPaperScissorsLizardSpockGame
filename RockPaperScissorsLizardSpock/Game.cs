@@ -12,18 +12,14 @@ namespace RockPaperScissorsLizardSpock
         //member variables
         public Players playerOne;
         public Players playerTwo;
-        
         bool condition;
         public Comparative comparative;
-        
 
         //constructor
         public Game()
         {
             playerOne = new Human();
-            comparative = new Comparative();
-            
-            
+            comparative = new Comparative();    
         }
 
         // member methods
@@ -76,20 +72,17 @@ namespace RockPaperScissorsLizardSpock
                         Console.WriteLine();
                         condition = true;
                         break;
-
                 }
-
-            }
-            
+            }       
         }       
         public void DisplayWinner()
         {
-            if (comparative.playerOneScore == 20)
+            if (playerOne.score == 20)
             {
                 Console.WriteLine();
                 Console.WriteLine("Player One is victorious!!!");
             }
-            if (comparative.playerTwoScore == 20)
+            if (playerTwo.score == 20)
             {
                 Console.WriteLine();
                 Console.WriteLine("Player Two is victorious!!!");
@@ -97,7 +90,7 @@ namespace RockPaperScissorsLizardSpock
         }
         public bool DoesGameContinue()
         {
-            if (comparative.playerOneScore >= 20 || comparative.playerTwoScore >= 20)
+            if (playerOne.score >= 20 || playerTwo.score >= 20)
             {
                 return false;
             }
@@ -106,8 +99,6 @@ namespace RockPaperScissorsLizardSpock
                 return true;
             }
         }
-
-
         public void RunGame()
         {
             Welcome();
@@ -115,17 +106,14 @@ namespace RockPaperScissorsLizardSpock
             ChooseGameType();
             while (DoesGameContinue())
             {
-                
                 playerOne.ChooseGesture();
                 Console.WriteLine();
                 Console.WriteLine();
                 playerTwo.ChooseGesture();           
                 Console.WriteLine();
-                comparative.CompareChoices(playerOne,playerTwo,comparative.playerOneScore, comparative.playerTwoScore);
-
+                comparative.CompareChoices(playerOne,playerTwo);
             }
             DisplayWinner();
-
         }
     }
 }

@@ -56,6 +56,7 @@ namespace RockPaperScissorsLizardSpock
                         break;
                     default:
                         Console.WriteLine("The choice you made was not valid.");
+                        Console.WriteLine();
                         break;
                 }
             }

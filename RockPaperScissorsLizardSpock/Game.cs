@@ -103,6 +103,7 @@ namespace RockPaperScissorsLizardSpock
                 playerTwoScore += 10;
                 Console.WriteLine();
                 Console.WriteLine("Paper covers rock");
+                Console.WriteLine();
                 Console.WriteLine("Player Two Wins This Round");
                 Console.WriteLine();
 
@@ -112,6 +113,7 @@ namespace RockPaperScissorsLizardSpock
                 playerTwoScore += 10;
                 Console.WriteLine();
                 Console.WriteLine("Spock vaporizes rock");
+                Console.WriteLine();
                 Console.WriteLine("Player Two Wins This Round");
                 Console.WriteLine();
             }
@@ -120,6 +122,7 @@ namespace RockPaperScissorsLizardSpock
                 playerOneScore += 10;
                 Console.WriteLine();
                 Console.WriteLine("Rock smashes scissors");
+                Console.WriteLine();
                 Console.WriteLine("Player One Wins this Round");
                 Console.WriteLine();
 
@@ -129,6 +132,7 @@ namespace RockPaperScissorsLizardSpock
                 playerOneScore += 10;
                 Console.WriteLine();
                 Console.WriteLine("Rock smashes lizard");
+                Console.WriteLine();
                 Console.WriteLine("player One Wins This Round");
                 Console.WriteLine();
             }
@@ -137,6 +141,7 @@ namespace RockPaperScissorsLizardSpock
                 playerOneScore += 10;
                 Console.WriteLine();
                 Console.WriteLine("Paper covers rock");
+                Console.WriteLine();
                 Console.WriteLine("Player One Wins This Round");
                 Console.WriteLine();
             }
@@ -145,6 +150,7 @@ namespace RockPaperScissorsLizardSpock
                 playerOneScore += 10;
                 Console.WriteLine();
                 Console.WriteLine("Paper disproves Spock");
+                Console.WriteLine();
                 Console.WriteLine("Player One Wins This Round");
                 Console.WriteLine();
             }
@@ -153,6 +159,7 @@ namespace RockPaperScissorsLizardSpock
                 playerTwoScore += 10;
                 Console.WriteLine();
                 Console.WriteLine("Lizard eats paper");
+                Console.WriteLine();
                 Console.WriteLine("Player Two Wins This Round");
                 Console.WriteLine();
             }
@@ -161,6 +168,7 @@ namespace RockPaperScissorsLizardSpock
                 playerTwoScore += 10;
                 Console.WriteLine();
                 Console.WriteLine("Scissors cut paper");
+                Console.WriteLine();
                 Console.WriteLine("Player Two Wins This Round");
                 Console.WriteLine();
             }
@@ -169,6 +177,7 @@ namespace RockPaperScissorsLizardSpock
                 playerTwoScore += 10;
                 Console.WriteLine();
                 Console.WriteLine("Rock crushes scissors");
+                Console.WriteLine();
                 Console.WriteLine("Player Two Wins This Round");
                 Console.WriteLine();
             }
@@ -177,6 +186,7 @@ namespace RockPaperScissorsLizardSpock
                 playerOneScore += 10;
                 Console.WriteLine();
                 Console.WriteLine("Scissors cut paper");
+                Console.WriteLine();
                 Console.WriteLine("Player One Wins This Round");
                 Console.WriteLine();
             }
@@ -185,6 +195,7 @@ namespace RockPaperScissorsLizardSpock
                 playerTwoScore += 10;
                 Console.WriteLine();
                 Console.WriteLine("Spock smashes Scissors");
+                Console.WriteLine();
                 Console.WriteLine("Player Two Wins This Round");
                 Console.WriteLine();
             }
@@ -193,6 +204,7 @@ namespace RockPaperScissorsLizardSpock
                 playerOneScore += 10;
                 Console.WriteLine();
                 Console.WriteLine("Scissors decapitate lizard");
+                Console.WriteLine();
                 Console.WriteLine("Player One Wins This Round");
                 Console.WriteLine();
             }
@@ -201,6 +213,7 @@ namespace RockPaperScissorsLizardSpock
                 playerOneScore += 10;
                 Console.WriteLine();
                 Console.WriteLine("Lizard poisons Spock");
+                Console.WriteLine();
                 Console.WriteLine("Player One Wins This Round");
                 Console.WriteLine();
             }
@@ -209,6 +222,7 @@ namespace RockPaperScissorsLizardSpock
                 playerOneScore += 10;
                 Console.WriteLine();
                 Console.WriteLine("Lizard eats paper");
+                Console.WriteLine();
                 Console.WriteLine("Player One Wins This Round");
                 Console.WriteLine();
             }
@@ -217,6 +231,7 @@ namespace RockPaperScissorsLizardSpock
                 playerTwoScore += 10;
                 Console.WriteLine();
                 Console.WriteLine("Rock crushes lizard");
+                Console.WriteLine();
                 Console.WriteLine("Player Two Wins This Round");
                 Console.WriteLine();
             }
@@ -225,6 +240,7 @@ namespace RockPaperScissorsLizardSpock
                 playerTwoScore += 10;
                 Console.WriteLine();
                 Console.WriteLine("Scissors decapitate lizard");
+                Console.WriteLine();
                 Console.WriteLine("Player Two Wins This Round");
                 Console.WriteLine();
             }
@@ -233,6 +249,7 @@ namespace RockPaperScissorsLizardSpock
                 playerTwoScore += 10;
                 Console.WriteLine();
                 Console.WriteLine("Paper disproves Spock");
+                Console.WriteLine();
                 Console.WriteLine("Player Two Wins This Round");
                 Console.WriteLine();
             }
@@ -241,6 +258,7 @@ namespace RockPaperScissorsLizardSpock
                 playerTwoScore += 10;
                 Console.WriteLine();
                 Console.WriteLine("Lizard poisons Spock");
+                Console.WriteLine();
                 Console.WriteLine("Player Two Wins This Round");
                 Console.WriteLine();
             }
@@ -249,6 +267,7 @@ namespace RockPaperScissorsLizardSpock
                 playerOneScore += 10;
                 Console.WriteLine();
                 Console.WriteLine("Spock vaporizes rock");
+                Console.WriteLine();
                 Console.WriteLine("Player One Wins This Round");
                 Console.WriteLine();
             }
@@ -257,6 +276,7 @@ namespace RockPaperScissorsLizardSpock
                 playerOneScore += 10;
                 Console.WriteLine();
                 Console.WriteLine("Spock crushes scissors");
+                Console.WriteLine();
                 Console.WriteLine("Player One Wins This Round");
                 Console.WriteLine();
             }
